@@ -1,0 +1,130 @@
+SUMMARY NOTES  - IT FOR STATISTICS
+
+
+ASSIGNMENT 01
+ARLISTER GACHANJA 
+SCM 222891/2025
+
+
+
+Financial Engineering course, involves the application of Mathematics, Statistics and Computer science to solve problems present in the field of Finance.
+Information Technology – refers to the use f computers, software networks and other technologies to manage, process, store and communicate information
+
+
+Topic 1. ROLE OF INFORMATION TECHNOLOGY AND CMPUTER IN TODAY’S WORLD
+ IT is about using computers and software to manage, process, and communicate information.
+IT involves the study, design and development of computer based information systems.  
+Data Processing & Analysis: We use computers to clean, sort, and analyze vast datasets like historical stock prices, economic indicators, or real-time trade feeds to identify patterns and build predictive models.
+       Instance: Running a Monte Carlo simulation to forecast the potential future price of a complex derivative. Doing this by hand is impossible; with a computer, it takes seconds.
+Automation: Computers execute repetitive tasks flawlessly and at high speed.
+     Instance: High-Frequency Trading (HFT) algorithms that make thousands of trades per second based on predefined criteria, a process entirely driven by IT systems.
+Communication & Collaboration: Cloud platforms (like Google Workspace or Microsoft Teams) and APIs (Application Programming Interfaces) allow for seamless sharing of models and data between quants, traders, and risk managers across the globe.
+Storage & Retrieval: IT systems provide the "memory" for our financial world, storing everything from client portfolios to decades of market data in databases that can be queried instantly.
+
+
+
+TOPIC 2. FUNDAMENTALS OF COMPUTER OPERATIONS
+
+The core operation of the computer is the Input-Process-Output (IPO) Cycle, guided by stored instructions.
+
+1.  Input: It is the keying in of commands and instructions to a computer by using some of the computer software such as the mouse, and keyboard 
+    
+2.  Process: The Central Processing Unit (CPU) is the "brain." It fetches instructions from the software (e.g., Python, R) and performs calculations on the data. 
+3.  Output: The computer presents the results of the processing.
+ The result, the computer outputs what the commands were made and keyed in via the keyboard.
+4.   Storage: Crucially, results or intermediate data can be stored for later use (e.g., saving the result to a database or your hard disk).
+
+The Fetch-Decode-Execute Cycle: This is how the CPU does its job. It continuously:
+(1) Fetches the next instruction from memory,
+ (2) Decodes it to understand what to do (e.g., "add these two numbers"), 
+ (3) Executes the command. This happens billions of times per second.
+
+
+
+
+TOPIC 3. COMPUTER HARDWARE AND SOFTWARE
+
+Hardware – This is the tangible part of the computer
+
+CPU (Central Processing Unit): The brain. For statistical work, parallel processing running multiple calculations simultaneously, which speeds up tasks like bootstrapping or large-scale simulations.
+RAM (Random Access Memory): The computer's short-term memory. It's super-fast but volatile i.e. clears when powered off. When you load a dataset into R or Python, it lives in RAM. The more RAM you have, the larger the datasets you can work with without slowing down. 16GB is a modern minimum; 32GB+ is better for large financial models.
+Storage (Hard Disk Drive (HDD) and Solid State Drive(SSD)): The long-term memory. This is where your Operating System, software, and data files permanently reside. SSDs are much faster than HDDs, leading to quicker boot times, faster software loading, and speedier file access.
+Motherboard: The nervous system that connects all the components.
+Input and Output Devices: These key in commands to the computer. Examples are: Keyboard, mouse, monitor.
+
+b) Software These are computer parts that are intangible thus can’t be seen, or touched
+
+System Software:
+    Operating System (OS): Windows, macOS, Linux. It's the intermediary between you and the hardware. It manages resources, runs applications, and provides a user interface. Linux is heavily used on servers for its stability and performance.
+ Application Software:
+    General-Purpose: Excel (ubiquitous in finance for quick analysis and prototyping).
+Specialized Statistical Software: R, Python (with libraries like Pandas, NumPy, SciPy), MATLAB, SAS. These are our primary tools for statistical modeling and data analysis.
+    Database Software: SQL-based systems (MySQL, PostgreSQL) for managing and querying large, structured datasets.
+
+
+
+
+TOPIC 4. CONSTRUCTING DATA FILES
+
+A data file is a structured collection of information. How we structure it is critical for both humans and software to read it correctly.
+
+Format is Key:
+ CSV (Comma-Separated Values): The most common format for raw data. It's a plain text file where each line is a row, and values are separated by commas.
+        Examples:
+        Date, Open, High, Low, Close, Volume
+        2023-10-01,150.25,152.80,149.50,151.75,1567800
+        2023-10-02,151.80,154.20,151.10,153.90,1985200
+Excel (.xlsx): Good for manual work and formatting, but can be more complex for programs to read directly.
+    
+ Plain Text (.txt): For unstructured 
+
+Methods of File Organization
+Serial (sequential) files: They store records one after another just as they are created 
+Pro- simple and fast to create
+Con- slow to access
+Random  
+
+
+
+TOPIC 5. DISK STORAGE
+
+How data is stored physically affects speed, cost, and capacity.
+
+Magnetic Storage (HDD - Hard Disk Drive):
+    How it works: Uses spinning magnetic platters and a read/write head.
+    Pros: Cheap, high capacity (good for archiving old trade data).
+   Cons: Slower, mechanical parts can fail.
+Solid-State Storage (SSD - Solid State Drive):
+    How it work Uses flash memory chips (like a large USB drive). No moving parts.
+    Pros: Very fast (leads to much quicker system responsiveness and data loading), more durable, less power consumption.
+    Cons: More expensive per GB.
+    Verdict: Essential for your primary work machine. The speed boost for loading software and datasets is invaluable.
+Cloud Storage:
+ How it works: Data is stored on remote servers accessed via the internet (e.g., AWS S3, Google Cloud Storage, Microsoft Azure).
+    Pros: Scalable (pay for what you use), accessible from anywhere, built-in redundancy and backup.
+    Cons: Ongoing cost, dependent on internet connection.
+   Instance: A hedge fund might store petabytes of historical tick data on AWS S3 and use cloud computing (EC2) to run analysis on it.
+
+
+
+TOPIC 6. NUMBER SYSTEM BASES
+
+Computers only understand "on" and "off," represented by 1 and 0. This is the Binary (Base-2) system. Understanding bases is key to understanding how data is represented and how computers perform arithmetic.
+
+Decimal (Base-10): What we use daily. Ten symbols (0-9). Each position is a power of 10.
+    e.g., `253 = (2 * 10^2) + (5 * 10^1) + (3 * 10^0)`
+Binary (Base-2): The computer's native language. Two symbols (0,1). Each position is a power of 2.
+       e.g., `1101 = (1 * 2^3) + (1 * 2^2) + (0 * 2^1) + (1 * 2^0) = 8 + 4 + 0 + 1 = 13 (in decimal)`
+
+
+Basic Operations in Binary
+
+Addition: Works like decimal addition, but you "carry over" when you reach 2.
+    
+      1 1 1    (Carry over)
+      0 1 1 0  (6 in decimal)
+    + 0 1 1 1  (7 in decimal)
+   
+      1 1 0 1  (13 in decimal)
+    
+Subtraction: Often handled via addition using Two's Complement method (a way to represent negative numbers in binary).
